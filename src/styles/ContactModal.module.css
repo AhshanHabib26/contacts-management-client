@@ -49,7 +49,7 @@
   cursor: pointer;
   text-transform: uppercase;
 }
-.CMInputContainer{
+.CMInputContainer {
   width: 100%;
   height: 45px;
   border-radius: 5px;
@@ -60,11 +60,20 @@
   font-size: 16px;
   background-color: transparent;
   margin-bottom: 15px;
-  
 }
 
 .CMInputContainer:focus,
-.CMInputContainer:valid{
-  border: 1px solid #101C43;
+.CMInputContainer:valid {
+  border: 1px solid #101c43;
   transition: 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .ACMainContainer {
+    max-width: 400px;
+  }
+  .ACMainContainer .GridInput {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+  }
 }

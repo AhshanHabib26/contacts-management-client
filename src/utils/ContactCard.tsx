@@ -84,10 +84,12 @@ const ContactCard = ({ item }: IContactCardProps) => {
         </div>
         <div className={Styles.CCBtnContainer}>
           <FilePenLine
+            className={Styles.iconCursor}
             onClick={() => handleEditButton(item._id)}
             color="#2E75DA"
           />
           <Trash2
+            className={Styles.iconCursor}
             onClick={() => handleDeleteButton(item._id)}
             color="#F74D00"
             style={{ marginLeft: "5px" }}
