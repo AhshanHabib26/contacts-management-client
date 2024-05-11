@@ -5,18 +5,21 @@ import Container from "../../utils/Container";
 
 const Navbar = () => {
   return (
-    <div style={{  backgroundColor: "#101c43"}}>
+    <div style={{ backgroundColor: "#101c43" }}>
       <Container>
         <div className={Styles.mainNavbar}>
-          <div className={Styles.logoContainer}>
-            <img
-              width={40}
-              height={40}
-              src={logoImg}
-              alt="Contacts Management"
-            />
-            <h1 className="poppins-semibold">NHCM</h1>
-          </div>
+          <Link to="/" style={{ textDecoration: "none", color: "#fff"}}>
+            {" "}
+            <div className={Styles.logoContainer}>
+              <img
+                width={40}
+                height={40}
+                src={logoImg}
+                alt="Contacts Management"
+              />
+              <h1 className="poppins-semibold">NHCM</h1>
+            </div>
+          </Link>
           <div>
             <Link
               style={{ backgroundColor: "#F74D00" }}
