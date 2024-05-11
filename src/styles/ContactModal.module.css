@@ -27,7 +27,6 @@
   max-width: 550px;
   width: 100%;
   margin: 0 auto;
-  padding: 15px;
 }
 .ACMainContainer h1 {
   font-size: 24px;
@@ -68,12 +67,19 @@
   transition: 0.5s ease-in-out;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .ACMainContainer {
-    max-width: 400px;
+    max-width: 320px;
+    margin: 0px 5px;
+  }
+  .ACMainContainer h1 {
+    font-size: 20px;
   }
   .ACMainContainer .GridInput {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 0;
+  }
+  .modalContent {
+    padding: 10px;
   }
 }

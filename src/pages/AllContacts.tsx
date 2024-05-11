@@ -14,7 +14,7 @@ const AllContacts = () => {
   }
 
   return (
-    <div style={{ marginTop: "30px" }}>
+    <div style={{ margin: "30px 0px" }}>
       <Container>
         <h1
           className="poppins-semibold"
