@@ -5,14 +5,12 @@ type TInputProps = {
   name: string;
   type?: string;
   placeholder?: string;
-  required?: boolean;
 };
 
 const NHFormInput = ({
   name,
   placeholder,
   type,
-  required,
 }: TInputProps) => {
   const { control } = useFormContext();
 
@@ -27,7 +25,6 @@ const NHFormInput = ({
           {...field}
           type={type}
           placeholder={placeholder}
-          required={required}
         />
       )}
     />
