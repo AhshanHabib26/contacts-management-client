@@ -1,5 +1,6 @@
 import {
   FilePenLine,
+  Heart,
   Mail,
   MapPin,
   PhoneCall,
@@ -10,8 +11,12 @@ import Styles from "../styles/ContactCard.module.css";
 import { useState } from "react";
 import ContactModal from "./ContactModal";
 import { TContact } from "../pages/AllContacts";
-import { useDeleteContactMutation } from "../redux/features/contacts/contactsApi";
+import {
+  useDeleteContactMutation,
+  useFavoriteContactMutation,
+} from "../redux/features/contacts/contactsApi";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 interface IContactCardProps {
   item: TContact;
@@ -21,6 +26,7 @@ const ContactCard = ({ item }: IContactCardProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItemId, setSelectedItemId] = useState("");
   const [deleteContact] = useDeleteContactMutation();
+  const [favoriteContact] = useFavoriteContactMutation();
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -60,6 +66,21 @@ const ContactCard = ({ item }: IContactCardProps) => {
     });
   };
 
+  const handleFavoriteButton = async (id: string) => {
+    try {
+      if (item.isFavorite) {
+        return toast.error("This contact is already a favorite!");
+      } else {
+        const res = await favoriteContact(id).unwrap();
+        toast.success(res.message, { id: "contactId" });
+      }
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <div className={Styles.contactCardContainer}>
       <div>
@@ -83,16 +104,22 @@ const ContactCard = ({ item }: IContactCardProps) => {
           <p className="poppins-regular">{item.address}</p>
         </div>
         <div className={Styles.CCBtnContainer}>
+          <Heart
+            onClick={() => handleFavoriteButton(item._id)}
+            className={Styles.iconCursor}
+            fill={item.isFavorite ? "#F31B16" : "#fff"}
+            style={{ color: item.isFavorite ? "#F31B16" : "" }}
+          />
           <FilePenLine
             className={Styles.iconCursor}
             onClick={() => handleEditButton(item._id)}
             color="#2E75DA"
+            style={{ margin: "0 5px" }}
           />
           <Trash2
             className={Styles.iconCursor}
             onClick={() => handleDeleteButton(item._id)}
             color="#F74D00"
-            style={{ marginLeft: "5px" }}
           />
         </div>
       </div>

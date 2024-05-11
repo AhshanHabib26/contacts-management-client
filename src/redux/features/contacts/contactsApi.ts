@@ -33,6 +33,13 @@ const contactsApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ["Contacts"],
     }),
+    favoriteContact: builder.mutation({
+      query: (id) => ({
+        url: `/contact/${id}`,
+        method: "PATCH",
+      }),
+      invalidatesTags: ["Contacts"],
+    }),
   }),
 });
 
@@ -42,4 +49,5 @@ export const {
   useUpdateContactMutation,
   useGetSingleContactQuery,
   useDeleteContactMutation,
+  useFavoriteContactMutation
 } = contactsApi;

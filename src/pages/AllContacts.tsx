@@ -10,6 +10,7 @@ export type TContact = {
   address: string;
   phoneNumber: string;
   profilePicture: string;
+  isFavorite: boolean;
 };
 
 const AllContacts = () => {
