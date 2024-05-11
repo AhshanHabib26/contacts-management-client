@@ -8,7 +8,12 @@ type TInputProps = {
   required?: boolean;
 };
 
-const NHFormInput = ({ name, placeholder, type, required }: TInputProps) => {
+const NHFormInput = ({
+  name,
+  placeholder,
+  type,
+  required,
+}: TInputProps) => {
   const { control } = useFormContext();
 
   return (

@@ -1,12 +1,13 @@
 import { useGetAllContactQuery } from "../redux/features/contacts/contactsApi";
 import ContactCard from "../utils/ContactCard";
 import Container from "../utils/Container";
-import Styles from "../styles/AllContacts.module.css"
+import Styles from "../styles/AllContacts.module.css";
 
-type TContact = {
+export type TContact = {
   _id: string;
   name: string;
   email: string;
+  address: string;
   phoneNumber: string;
   profilePicture: string;
 };

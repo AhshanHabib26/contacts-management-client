@@ -1,0 +1,70 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.ACMainContainer {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px;
+}
+.ACMainContainer h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.ACMainContainer .GridInput {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.ACMainContainer input[type="submit"] {
+  width: 120px;
+  height: 50px;
+  border: none;
+  background-color: #101c43;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.CMInputContainer{
+  width: 100%;
+  height: 45px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #d6d6d6;
+  padding-left: 5px;
+  color: #363636;
+  font-size: 16px;
+  background-color: transparent;
+  margin-bottom: 15px;
+  
+}
+
+.CMInputContainer:focus,
+.CMInputContainer:valid{
+  border: 1px solid #101C43;
+  transition: 0.5s ease-in-out;
+}
