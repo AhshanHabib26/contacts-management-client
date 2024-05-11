@@ -25,7 +25,7 @@ const AddContacts = () => {
 
   return (
     <Container>
-      <div style={{ marginTop: "50px" }}>
+      <div style={{ marginTop: "80px" }}>
         <div className={Styles.ACMainContainer}>
           <h1 className="poppins-regular">Add Contacts</h1>
           <NHFormProvider onSubmit={handleContacts}>
