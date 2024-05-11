@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+### Project Details
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Project Name: NH Contact Management
+- Project Technology:
+  - Frontend: ReactJS, TypeScript.
+  - Backend: Express, MongoDB, Mongoose, TypeScript.
+- Project URL:
+  - For Frontend: [`https://nh-contact-management.netlify.app/`]
+  - For Frontend: [`https://contacts-management-server-azure.vercel.app/`]
 
-Currently, two official plugins are available:
+### Project Details (Frontend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Navbar Menu
 
-## Expanding the ESLint configuration
+  - Brand Logo
+  - Add Contacts
+  - All Contacts
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Site Page :
+  - Home
+  - Add Contacts
+  - All Contacts
+  - Footer
 
-- Configure the top-level `parserOptions` property like this:
+### For Using This Awesome Project On Your Local Machine, Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+First, Copy the Github Repository Link
+
+```bash
+https://github.com/AhshanHabib26/contacts-management-client.git
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Second, Run the Command Line
+
+```bash
+npm install
+
+```
+
+Third, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### This Website is Totally User Friendly and Fully Responsive, Please review this awesome projects and feel free and give your opinion Or any suggestions. Really, it's my pleasure.

@@ -10,13 +10,13 @@ import {
 import Styles from "../styles/ContactCard.module.css";
 import { useState } from "react";
 import ContactModal from "./ContactModal";
-import { TContact } from "../pages/AllContacts";
 import {
   useDeleteContactMutation,
   useFavoriteContactMutation,
 } from "../redux/features/contacts/contactsApi";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
+import { TContact } from "../types/types.global";
 
 interface IContactCardProps {
   item: TContact;

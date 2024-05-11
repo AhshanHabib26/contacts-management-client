@@ -6,7 +6,6 @@ import Loader from "../components/Loader";
 import { TContact } from "../types/types.global";
 
 
-
 const AllContacts = () => {
   const { data, isLoading } = useGetAllContactQuery("");
 
