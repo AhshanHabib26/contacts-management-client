@@ -15,7 +15,7 @@ const NHFormProvider = ({ children, onSubmit }: TFormProps) => {
 
   const submit: SubmitHandler<FieldValues> = (data) => {
     onSubmit(data);
-    console.log(data);
+    methods.reset();
   };
 
   return (
