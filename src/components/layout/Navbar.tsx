@@ -12,8 +12,8 @@ const Navbar = () => {
             {" "}
             <div className={Styles.logoContainer}>
               <img
-                width={40}
-                height={40}
+                width={35}
+                height={35}
                 src={logoImg}
                 alt="Contacts Management"
               />
