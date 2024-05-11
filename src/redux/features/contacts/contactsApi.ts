@@ -8,9 +8,11 @@ const contactsApi = baseApi.injectEndpoints({
         method: "POST",
         body: data,
       }),
+      invalidatesTags: ["Contacts"],
     }),
     getAllContact: builder.query({
       query: () => "/contact",
+      providesTags: ["Contacts"],
     }),
     updateContact: builder.mutation({
       query: ({ id, data }) => ({
@@ -18,15 +20,18 @@ const contactsApi = baseApi.injectEndpoints({
         method: "PUT",
         body: data,
       }),
+      invalidatesTags: ["Contacts"],
     }),
     getSingleContact: builder.query({
       query: (id) => `/contact/${id}`,
+      providesTags: ["Contacts"],
     }),
     deleteContact: builder.mutation({
       query: (id) => ({
         url: `/contact/${id}`,
         method: "DELETE",
       }),
+      invalidatesTags: ["Contacts"],
     }),
   }),
 });
@@ -36,5 +41,5 @@ export const {
   useGetAllContactQuery,
   useUpdateContactMutation,
   useGetSingleContactQuery,
-  useDeleteContactMutation
+  useDeleteContactMutation,
 } = contactsApi;
