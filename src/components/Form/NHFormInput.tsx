@@ -1,11 +1,8 @@
 import { Controller, useFormContext } from "react-hook-form";
 import Styles from "../../styles/NHFormInput.module.css";
+import { TInputProps } from "../../types/types.global";
 
-type TInputProps = {
-  name: string;
-  type?: string;
-  placeholder?: string;
-};
+
 
 const NHFormInput = ({
   name,

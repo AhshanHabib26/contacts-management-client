@@ -3,16 +3,9 @@ import ContactCard from "../utils/ContactCard";
 import Container from "../utils/Container";
 import Styles from "../styles/AllContacts.module.css";
 import Loader from "../components/Loader";
+import { TContact } from "../types/types.global";
 
-export type TContact = {
-  _id: string;
-  name: string;
-  email: string;
-  address: string;
-  phoneNumber: string;
-  profilePicture: string;
-  isFavorite: boolean;
-};
+
 
 const AllContacts = () => {
   const { data, isLoading } = useGetAllContactQuery("");
