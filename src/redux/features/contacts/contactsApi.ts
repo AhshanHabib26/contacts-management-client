@@ -9,7 +9,10 @@ const contactsApi = baseApi.injectEndpoints({
         body: data,
       }),
     }),
+    getAllContact: builder.query({
+      query: () => "/contact",
+    }),
   }),
 });
 
-export const { useCreateContactMutation } = contactsApi;
+export const { useCreateContactMutation , useGetAllContactQuery} = contactsApi;
