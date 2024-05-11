@@ -7,11 +7,11 @@ const Navbar = () => {
     <div className={Styles.mainNavbar}>
       <div className={Styles.logoContainer}>
         <img width={40} height={40} src={logoImg} alt="Contacts Management" />
-        <h1>NHCM</h1>
+        <h1 className="poppins-semibold">NHCM</h1>
       </div>
       <div>
-        <Link style={{ backgroundColor: "#F74D00"}} className={Styles.linkStyle} to="/add-contacts">Add Contacts</Link>
-        <Link style={{ backgroundColor: "#2E75DA"}} className={Styles.linkStyle} to="/all-contacts">All Contacts</Link>
+        <Link style={{ backgroundColor: "#F74D00"}} className={`${Styles.linkStyle} poppins-light`} to="/add-contacts">Add Contacts</Link>
+        <Link style={{ backgroundColor: "#2E75DA"}} className={`${Styles.linkStyle} poppins-light`} to="/all-contacts">All Contacts</Link>
       </div>
     </div>
   );
